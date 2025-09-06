@@ -20,11 +20,11 @@
 .color3 {
     width: 300px;
     height: 200px;
-    background: linear-gradient(90deg, #ee6ef5,#57b9ff);
+    background: linear-gradient(90deg, #ee6ef5, #57b9ff);
     color: hsl(50 100% 60%);
 
 }
- 
+
 .box-1 {
     width: 100px;
     height: 100px;
@@ -32,6 +32,12 @@
     margin-left: 10px;
     background-color: palevioletred;
     border-radius: 10px 20px 30px 40px;
+}
+
+.box-1:hover {
+    background-color: red;
+    rotate: 90deg;
+    transition: all 0.5s ease 0s;
 }
 
 .box-2 {
@@ -43,6 +49,13 @@
     border-radius: 40px 40px 10px 10px;
 }
 
+.box-2:hover {
+    background-color: green;
+    translate: 20px;
+    scale: 1.1;
+    transition: all 0.5s ease 0s;
+}
+
 .box-3 {
     width: 100px;
     height: 100px;
@@ -50,8 +63,15 @@
     margin-left: 10px;
     background-color: #00FF00C7;
     border-radius: 50%;
-    box-shadow: -5px 5px 5px rgba(5, 58, 33, 0.5) 
-    /* inset = тени внутри */
+    box-shadow: -5px 5px 5px rgba(5, 58, 33, 0.5)
+        /* inset = тени внутри */
+}
+
+.box-3:hover {
+    transition: 1s;
+    border: 5px solid black;
+    translate: 20px;
+    box-shadow: 20px red;
 }
 
 .box-4 {
@@ -61,6 +81,8 @@
     margin-left: 10px;
     background-color: hsl(0 100% 40% / 0.75);
     border-radius: 20px;
+    cursor: progress;
+
 
     /* background-image: url(./что-то.png);
     можно добавлять несколько фоновых изображений
@@ -72,10 +94,16 @@
     /* background-position: center / 20px 80px / 100% 50% /;
     background-size: 100% 100% / 100px 200px / 100px auto / cover;
     background-repeat: repeat / no-repeat / space / repeat-x / repeat-y / round; */
-    
+
     /* background-attachment: fixed / local;
 
     background-clip: border-box / padding-box / content-box / text; */
+}
+
+.box-4:hover {
+    background-color: rgb(97, 0, 0);
+    rotate: 180deg;
+    transition: 1s;
 }
 
 .main-box {
@@ -90,6 +118,79 @@
     position: relative;
     /* position: fixed; */
     /* position: sticky; */
-    top:50px;
+    top: 50px;
     left: 500px;
 }
+
+.flex-container {
+    gap: 10px;
+    padding: 10px;
+    background-color: lightskyblue;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.flex-element {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    padding: 10px;
+}
+
+.flex-column {
+    flex-direction: row;
+}
+
+.with-custom-file-button::file-selector-button {
+    height: 40px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 6px solid rgb(209, 121, 209);
+    background: linear-gradient(90deg, #121959, #172179, #384194);
+    font-size: 16px;
+    font-family: "Comic Sans MS";
+    color: rgb(190, 185, 185);
+    cursor: pointer;
+
+}
+
+.button-style {
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 32px;
+    font-family: "Comic Sans MS";
+    background-color: orangered;
+    display: inline-flex;
+    transform: rotate(30deg);
+}
+
+.button-effect:hover {
+    background-color: orange;
+}
+
+.button-effect:active {
+    background-color: #ffcc00;
+}
+
+.input-effect:active {
+    background-color: #ee6ef5;
+}
+
+.user-select {
+    user-select: none;
+    font-size: 32px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 5px solid #ee6ef5;
+    border-radius: 20px;
+    display: inline-flex;
+    background-color: #a04aa5;
+}
+
+
+/* html {
+    scroll-behavior: smooth;
+} */
